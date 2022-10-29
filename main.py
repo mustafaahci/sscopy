@@ -19,7 +19,7 @@ class SSCopy(QWidget):
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint | Qt.WindowType.Tool)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose)
-        self.setFixedSize(self.size())
+        self.setFixedSize(self.screen().size())
         self._frame = Frame(self)
         self._frame.setFixedSize(self.size())
         self._frame.captured.connect(self.captured)
@@ -34,12 +34,14 @@ class SSCopy(QWidget):
         self.showMinimized()
         x, y = start.x(), start.y()
         w, h = end.x() - start.x(), end.y() - start.y()
+        print(x, y, w, h)
         screenshot = self.screen().grabWindow(0, x, y, w, h)
 
         pytesseract.tesseract_cmd = TESSERACT_CMD
 
         image = Image.fromqpixmap(screenshot)
         text: str = pytesseract.image_to_string(image, lang="eng")
+        print(text)
 
         clipboard = QApplication.clipboard()
         clipboard.setText(text)
