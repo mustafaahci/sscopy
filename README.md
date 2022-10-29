@@ -13,5 +13,5 @@ if you want to close the script, you can easily terminate from your working pane
 
 
 [^1]: The screenshots are not saved on the computer.
-[^2]: The script is shown as red circle
+[^2]: The script is shown as red circle.
 
