@@ -5,7 +5,7 @@ An application for grabbing text from screenshot[^1]
 
 ## Hot To Use
 1. Run the main script
-2. Press Win + Z
+2. Press `Win + Z`
 3. Select the text area
 
 if you want to close the script, you can easily terminate from your working panel (cmd, pycharm etc.) or you can right-click to `Exit` from your system tray menu[^2].  
