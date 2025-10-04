@@ -3,7 +3,7 @@ An application for grabbing text from screenshot[^1]
 
 ![howto](https://media1.giphy.com/media/TiCJamNJ23hxdWkDG2/giphy.gif)
 
-## Hot To Use
+## How To Use
 1. Run the main script
 2. Press `Win + Z`
 3. Select the text area
